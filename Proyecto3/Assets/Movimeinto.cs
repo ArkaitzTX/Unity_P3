@@ -70,7 +70,7 @@ public class Movimeinto : MonoBehaviour
 
     IEnumerator Recarga()
     {
-        yield return new WaitForSeconds(arma.tiempoRecarga);
+        yield return new WaitForSeconds(arma.cadencia);
         recargado = true;
     }
 

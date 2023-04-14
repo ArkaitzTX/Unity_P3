@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Arma : MonoBehaviour
 {
-    [SerializeField] [Range(0.1f, 1f)] public float tiempoRecarga = .1f;
+    [SerializeField] [Range(0.1f, 1f)] public float cadencia = .1f;
     [SerializeField] [Range(1f, 100f)] public float daño = 1f;
 
     [SerializeField] GameObject municionPadre;
