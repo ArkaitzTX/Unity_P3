@@ -4,17 +4,20 @@ using UnityEngine;
 
 public class Arma : MonoBehaviour
 {
-    [SerializeField] [Range(0.1f, 1f)] public float cadencia = .1f;
-    [SerializeField] [Range(1f, 100f)] public float daño = 1f;
-
     [SerializeField] GameObject municionPadre;
+    Personaje personaje;
+
+    private void Start()
+    {
+        personaje = transform.parent.GetComponent<Personaje>();
+    }
 
     public void Disparo(GameObject enemigo) {
         GameObject municion = Instantiate(Resources.Load<GameObject>($"[PREF] municion"), transform.position, Quaternion.identity);
 
         Municion script = municion.GetComponent<Municion>();
         script.enemigo = enemigo.transform.position;
-        script.daño = daño;
+        script.daño = personaje.CogerArma().daño;
 
         municion.transform.parent = municionPadre.transform;
         Destroy(municion, 2f);

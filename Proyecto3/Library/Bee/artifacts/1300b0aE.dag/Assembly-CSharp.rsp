@@ -350,6 +350,10 @@
 "Assets/Arma.cs"
 "Assets/Movimeinto.cs"
 "Assets/Municion.cs"
+"Assets/OBJarma.cs"
+"Assets/OBJpersonaje.cs"
+"Assets/Personaje.cs"
+"Assets/Vida.cs"
 -langversion:9.0
 
 /deterministic

@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 72deae4d18418f94688abef8e8483df0, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: f77030a2985e80a49bb8a4b787bb69a0, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.6892163, g: 0.3971585, b: 0.22528067, a: 1}
+  m_IndirectSpecularColor: {r: 0.38818154, g: 0.45953044, b: 0.5709754, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -136,7 +136,9 @@ GameObject:
   - component: {fileID: 84214249}
   - component: {fileID: 84214252}
   - component: {fileID: 84214248}
+  - component: {fileID: 84214253}
   - component: {fileID: 84214251}
+  - component: {fileID: 84214254}
   m_Layer: 0
   m_Name: Personaje
   m_TagString: Untagged
@@ -156,10 +158,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1341905193}
   - {fileID: 1226102086}
+  - {fileID: 1341905193}
   m_Father: {fileID: 606342732}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &84214248
 CapsuleCollider:
@@ -237,9 +239,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c922a692cd993648ac07b911ff1aad2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 4
-  velocidadGiro: 8
-  arma: {fileID: 1226102091}
 --- !u!54 &84214252
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -256,6 +255,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!114 &84214253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84214246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11065d9d1bf5e894c931e9351beb04c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  personajes:
+  - {fileID: 11400000, guid: fd3451e3d847b9f468a3383c3450547a, type: 2}
+  miPersonaje: 0
+  armas:
+  - {fileID: 11400000, guid: db51d2156ace3994c8e83302d59fc2a8, type: 2}
+  miArma: 0
+  arma: {fileID: 1226102091}
+--- !u!114 &84214254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84214246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c443cd08be912438b8c6e1cd2754e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &114697597
 GameObject:
   m_ObjectHideFlags: 0
@@ -350,7 +380,7 @@ GameObject:
   m_Component:
   - component: {fileID: 132704107}
   m_Layer: 0
-  m_Name: municionPadre
+  m_Name: Municiones
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -364,12 +394,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 132704106}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.0719705, y: -0.3047657, z: 3.5094876}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 606342732}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &158471729
 GameObject:
@@ -741,8 +771,8 @@ Transform:
   m_Children:
   - {fileID: 114697600}
   - {fileID: 1482296375}
-  - {fileID: 84214247}
   - {fileID: 132704107}
+  - {fileID: 84214247}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1001,12 +1031,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1226102085}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3, y: 0.17, z: -0.312}
+  m_LocalPosition: {x: 0.3, y: 0.02, z: -0.312}
   m_LocalScale: {x: 1, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 84214247}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1226102088
 BoxCollider:
@@ -1083,8 +1113,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4da50c79f8be98046952c15813ba5073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cadencia: 0.1
-  "da\xF1o": 1
   municionPadre: {fileID: 132704106}
 --- !u!1 &1341905192
 GameObject:
@@ -1118,7 +1146,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 84214247}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1341905194
 BoxCollider:

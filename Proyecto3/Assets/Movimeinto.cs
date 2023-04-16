@@ -5,15 +5,14 @@ using ArrayFunc;
 
 public class Movimeinto : MonoBehaviour
 {
-    [SerializeField][Range(0f, 10f)] float velocidad, velocidadGiro;
-    [SerializeField] Arma arma;
-
+    Personaje personaje;
     GameObject[] enemigos;
     bool recargado = true;
 
     private void Start()
     {
         enemigos = BuscarEnemigos();
+        personaje = GetComponent<Personaje>();
     }
 
     void Update()
@@ -27,11 +26,11 @@ public class Movimeinto : MonoBehaviour
             transform.rotation = Quaternion.Slerp(
                 transform.rotation,
                 Quaternion.LookRotation(new Vector3(axis.z, 0, axis.x).normalized),
-                velocidadGiro * Time.deltaTime
+                personaje.CogerPersonaje().velocidadGiro * Time.deltaTime
             );
             //Mover el personaje
             transform.Translate(
-                new Vector3(axis.x, 0, -axis.z).normalized * Time.deltaTime * velocidad,
+                new Vector3(axis.x, 0, -axis.z).normalized * Time.deltaTime * personaje.CogerPersonaje().velocidad,
                 Space.World
             );
         }
@@ -59,8 +58,8 @@ public class Movimeinto : MonoBehaviour
                 transform.LookAt(enemigo.transform);
                 transform.rotation *= Quaternion.Euler(0, -90, 0);
 
-                if (recargado) { 
-                    arma.Disparo(enemigo);
+                if (recargado) {
+                    personaje.arma.Disparo(enemigo);
                     recargado = false;
                     StartCoroutine(Recarga());
                 }
@@ -70,7 +69,7 @@ public class Movimeinto : MonoBehaviour
 
     IEnumerator Recarga()
     {
-        yield return new WaitForSeconds(arma.cadencia);
+        yield return new WaitForSeconds(personaje.CogerArma().cadencia);
         recargado = true;
     }
 
