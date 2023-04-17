@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidad: 4
   velocidadGiro: 8
-  vida: 10
+  vida: 100
   suerte: 10

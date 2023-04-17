@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 7337460298102089568}
   m_Layer: 0
   m_Name: '[PREF] municion'
-  m_TagString: Untagged
+  m_TagString: Municion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,7 +98,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6875135617141498962
 MonoBehaviour:
@@ -112,9 +112,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 375aefd9b6840d645a772fd73f06982c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 80
+  velocidad: 40
   enemigo: {x: 0, y: 0, z: 0}
   direccion: {x: 0, y: 0, z: 0}
+  "da\xF1o": 0
+  miTag: 
 --- !u!96 &8961520204586783919
 TrailRenderer:
   serializedVersion: 2
@@ -157,7 +159,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.02
+  m_Time: 0.04
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -229,3 +231,5 @@ MonoBehaviour:
   velocidad: 0
   enemigo: {x: 0, y: 0, z: 0}
   direccion: {x: 0, y: 0, z: 0}
+  "da\xF1o": 0
+  miTag: 
