@@ -2,20 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Personaje : MonoBehaviour
 {
-    [SerializeField] OBJpersonaje[] personajes;
-    [SerializeField] int miPersonaje;
-
-    [SerializeField] OBJarma[] armas;
-    [SerializeField] int miArma;
+    [SerializeField] OBJpersonaje personajes;
+    [SerializeField] OBJarma armas;
 
     [SerializeField] public Arma arma;
 
+    public OBJarma CogerArma() => armas;
+    public OBJpersonaje CogerPersonaje() => personajes;
 
 
-    public OBJarma CogerArma() => armas[miArma];
-    public OBJpersonaje CogerPersonaje() => personajes[miPersonaje];
+
+
+
+#if UNITY_EDITOR
+    [ContextMenu("Jugador")]
+    public void Jugador()
+    {
+        armas.hideFlags = HideFlags.None;
+        arma.hideFlags = HideFlags.None;
+    }
+    [ContextMenu("Enemigo")]
+    public void Enemigo()
+    {
+        armas.hideFlags = HideFlags.HideInInspector;
+        arma.hideFlags = HideFlags.HideInInspector;
+    }
+#endif
 
 
 }

@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 104
+  controlID: 118
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 105
+  controlID: 67
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -275,7 +275,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 106
+  controlID: 68
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1233,22 +1233,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Objetos/Movimiento
+    - Assets/C# Script/Enemigos
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Objetos/Movimiento
+  - Assets/C# Script/Enemigos
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\LudusGlobal\Documents\GitHub\UnityLib\Unity_P3\Proyecto3
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 3e820000
-    m_LastClickedID: 33342
-    m_ExpandedIDs: 000000007a590000845900006a80000000ca9a3bffffff7f
+    m_SelectedIDs: da790000
+    m_LastClickedID: 31194
+    m_ExpandedIDs: 00000000825800008a5800009058000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1276,7 +1276,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000007a590000
+    m_ExpandedIDs: 0000000082580000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1408,21 +1408,21 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: befafffffe5800001659000030590000
+      m_ExpandedIDs: 1c9cffff80dfffff32fbffff68570000965700009a570000d2570000ee5700000a580000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Obstaculos M(1)
+        m_OriginalName: Obstaculos M(1)
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 22422
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 4
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 5}
       m_SearchString: 
@@ -1691,9 +1691,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -9.857791, y: 5.359515, z: -7.4909897}
+    m_Target: {x: -3.4389958, y: -2.64718, z: 20.353676}
     speed: 2
-    m_Value: {x: -9.857791, y: 5.359515, z: -7.4909897}
+    m_Value: {x: -3.4389958, y: -2.64718, z: 20.353676}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1740,13 +1740,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.035434153, y: -0.95275176, z: 0.122439824, w: 0.27575964}
+    m_Target: {x: -0.28853643, y: -0.21065009, z: 0.06524556, w: -0.931746}
     speed: 2
-    m_Value: {x: 0.035433687, y: -0.95273924, z: 0.12243822, w: 0.27575603}
+    m_Value: {x: -0.28862903, y: -0.20924865, z: 0.06481157, w: -0.932045}
   m_Size:
-    m_Target: 18.09941
+    m_Target: 14.70505
     speed: 2
-    m_Value: 18.09941
+    m_Value: 14.071818
   m_Ortho:
     m_Target: 0
     speed: 2

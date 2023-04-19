@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Movimiento Prueba
   m_EditorClassIdentifier: 
   posiciones:
-  - {x: -11.39, y: 1, z: -5.27}
-  - {x: -0.85, y: 1, z: -5.27}
+  - {x: -4.5, y: 1, z: 9.36}
+  - {x: -4.5, y: 1, z: 4.74}

@@ -30,7 +30,7 @@ public class Movimeinto : MonoBehaviour
             );
             //Mover el personaje
             transform.Translate(
-                new Vector3(axis.x, 0, -axis.z).normalized * Time.deltaTime * personaje.CogerPersonaje().velocidad,
+                new Vector3(axis.z, 0, axis.x).normalized * Time.deltaTime * personaje.CogerPersonaje().velocidad,
                 Space.World
             );
         }
@@ -57,7 +57,6 @@ public class Movimeinto : MonoBehaviour
             if (enemigo != null)
             {
                 transform.LookAt(enemigo.transform);
-                transform.rotation *= Quaternion.Euler(0, -90, 0);
 
                 if (recargado) {
                     personaje.arma.Disparo(enemigo);
